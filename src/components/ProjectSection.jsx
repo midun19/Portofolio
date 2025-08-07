@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Wedding Invitation",
     description:
-      "A digital wedding invitation website built using React and styled with Tailwind CSS. It features personalized guest names, event details, RSVP form, countdown timer, photo gallery, Google Maps integration, and a modern responsive design. The backend is powered by Supabase for real-time data storage and RSVP tracking.",
+      "A digital wedding invitation website built using React and styled with Tailwind CSS. It features personalized guest names, event details, RSVP form, countdown timer, Google Maps integration, and a modern responsive design. The backend is powered by Supabase for real-time data storage and RSVP tracking.",
     image: "/projects/project1.png",
     tags: [
       "React",
