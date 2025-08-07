@@ -7,7 +7,7 @@ import {
   Send,
   Twitter,
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useToast } from "../hooks/use-toast";
 import { Description } from "@radix-ui/react-toast";
@@ -15,10 +15,10 @@ import { Description } from "@radix-ui/react-toast";
 const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
     setTimeout(() => {
@@ -27,6 +27,12 @@ const ContactSection = () => {
         description: "Thank you for your message",
       });
       setIsSubmitting(false);
+      // Submit form ke FormSubmit (data masih ada)
+      e.target.submit();
+      // Reset form setelah submit (beri delay agar data terkirim)
+      setTimeout(() => {
+        if (formRef.current) formRef.current.reset();
+      }, 500);
     }, 1500);
   };
 
@@ -108,7 +114,14 @@ const ContactSection = () => {
           <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-            <form action="" className="space-y-6 " onSubmit={handleSubmit}>
+            <form
+              ref={formRef}
+              action="https://formsubmit.co/zhillanhamidan19@gmail.com"
+              method="POST"
+              className="space-y-6 "
+              target="_blank"
+              onSubmit={handleSubmit}
+            >
               <div className="">
                 <label
                   htmlFor="name"

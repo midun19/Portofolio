@@ -22,11 +22,11 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
-            atque ratione voluptatum, id necessitatibus veniam distinctio
-            officia tenetur delectus inventore reiciendis est similique autem
-            commodi obcaecati eos eum architecto quod numquam dolore pariatur
-            enim. Ipsa non corporis magnam ad beatae!
+            A passionate Web Developer turning ideas into visually stunning and
+            responsive digital experiences. I blend technical precision with
+            creative design to build interfaces that are not only intuitive but
+            leave a lasting impression. Every line of code I write is driven by
+            a commitment to excellence, innovation, and delivering real impact.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
